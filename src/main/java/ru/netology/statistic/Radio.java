@@ -92,4 +92,16 @@ public class Radio {
             currentVolume = currentVolume - 1;
         }
     }
+
+    public void decrease1Volume() {
+        if (currentVolume <= 0) {
+            currentVolume = 10;
+        }
+    }
+
+    public void decrease2Volume() {
+        if (currentVolume >= 0) {
+            currentVolume = 10;
+        }
+    }
 }

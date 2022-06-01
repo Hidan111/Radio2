@@ -671,4 +671,32 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void findDecrease13() {
+        Radio cond = new Radio();
+
+        cond.setCurrentVolume(0);
+
+        cond.decrease1Volume();
+
+        int actual = cond.getCurrentVolume();
+        int expected = 10;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findDecrease14() {
+        Radio cond = new Radio();
+
+        cond.setCurrentVolume(0);
+
+        cond.decrease2Volume();
+
+        int actual = cond.getCurrentVolume();
+        int expected = 10;
+
+        assertEquals(expected, actual);
+    }
 }
