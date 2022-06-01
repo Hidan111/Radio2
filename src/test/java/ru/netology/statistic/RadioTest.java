@@ -138,7 +138,7 @@ public class RadioTest {
 
         cond.setCurrentRadioStation(9);
 
-        cond.nextRadioStation();
+        cond.next1RadioStation();
 
         int actual = cond.getCurrentRadioStation();
         int expected = 0;
@@ -152,7 +152,7 @@ public class RadioTest {
 
         cond.setCurrentRadioStation(0);
 
-        cond.prevRadioStation();
+        cond.prev1RadioStation();
 
         int actual = cond.getCurrentRadioStation();
         int expected = 9;
@@ -444,7 +444,7 @@ public class RadioTest {
 
         cond.setCurrentVolume(10);
 
-        cond.increaseVolume();
+        cond.increase1Volume();
 
         int actual = cond.getCurrentVolume();
         int expected = 0;
