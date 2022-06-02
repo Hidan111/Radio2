@@ -189,6 +189,62 @@ public class RadioTest {
     }
 
     @Test
+    void findNext14() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(-1);
+
+        cond.next5RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findNext15() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(-1);
+
+        cond.next6RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findNext16() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(10);
+
+        cond.next7RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 9;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findNext17() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(10);
+
+        cond.next8RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void findPrev10() {
         Radio cond = new Radio();
 
@@ -363,6 +419,62 @@ public class RadioTest {
         cond.setCurrentRadioStation(9);
 
         cond.prev4RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findPrev14() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(10);
+
+        cond.prev5RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findPrev15() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(10);
+
+        cond.prev6RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 9;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findPrev16() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(-1);
+
+        cond.prev7RadioStation();
+
+        int actual = cond.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findPrev17() {
+        Radio cond = new Radio();
+
+        cond.setCurrentRadioStation(-1);
+
+        cond.prev8RadioStation();
 
         int actual = cond.getCurrentRadioStation();
         int expected = 0;
@@ -579,6 +691,34 @@ public class RadioTest {
     }
 
     @Test
+    void findIncrease15() {
+        Radio cond = new Radio();
+
+        cond.setCurrentVolume(-1);
+
+        cond.increase5Volume();
+
+        int actual = cond.getCurrentVolume();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIncrease16() {
+        Radio cond = new Radio();
+
+        cond.setCurrentVolume(-1);
+
+        cond.increase6Volume();
+
+        int actual = cond.getCurrentVolume();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void findDecrease11() {
         Radio cond = new Radio();
 
@@ -784,6 +924,34 @@ public class RadioTest {
 
         int actual = cond.getCurrentVolume();
         int expected = 9;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findDecrease16() {
+        Radio cond = new Radio();
+
+        cond.setCurrentVolume(11);
+
+        cond.decrease5Volume();
+
+        int actual = cond.getCurrentVolume();
+        int expected = 10;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findDecrease17() {
+        Radio cond = new Radio();
+
+        cond.setCurrentVolume(11);
+
+        cond.decrease6Volume();
+
+        int actual = cond.getCurrentVolume();
+        int expected = 0;
 
         assertEquals(expected, actual);
     }
