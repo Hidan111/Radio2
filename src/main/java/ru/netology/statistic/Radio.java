@@ -112,6 +112,18 @@ public class Radio {
         }
     }
 
+    public void increase3Volume() {
+        if (currentVolume >= 0) {
+            currentVolume = 1;
+        }
+    }
+
+    public void increase4Volume() {
+        if (currentVolume <= 0) {
+            currentVolume = 1;
+        }
+    }
+
     public void decreaseVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
@@ -127,6 +139,18 @@ public class Radio {
     public void decrease2Volume() {
         if (currentVolume >= 0) {
             currentVolume = 0;
+        }
+    }
+
+    public void decrease3Volume() {
+        if (currentVolume <= 10) {
+            currentVolume = 9;
+        }
+    }
+
+    public void decrease4Volume() {
+        if (currentVolume >= 10) {
+            currentVolume = 9;
         }
     }
 }
