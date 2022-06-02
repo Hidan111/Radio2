@@ -486,10 +486,118 @@ public class RadioTest {
     void findIndication() {
         Radio cond = new Radio();
 
+        cond.currentRadioStation = 0;
+
+        int actual = cond.currentRadioStation;
+        int expected = 0;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication1() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 1;
+
+        int actual = cond.currentRadioStation;
+        int expected = 1;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication2() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 2;
+
+        int actual = cond.currentRadioStation;
+        int expected = 2;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication3() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 3;
+
+        int actual = cond.currentRadioStation;
+        int expected = 3;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication4() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 4;
+
+        int actual = cond.currentRadioStation;
+        int expected = 4;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication5() {
+        Radio cond = new Radio();
+
         cond.currentRadioStation = 5;
 
         int actual = cond.currentRadioStation;
         int expected = 5;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication6() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 6;
+
+        int actual = cond.currentRadioStation;
+        int expected = 6;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication7() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 7;
+
+        int actual = cond.currentRadioStation;
+        int expected = 7;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication8() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 8;
+
+        int actual = cond.currentRadioStation;
+        int expected = 8;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void findIndication9() {
+        Radio cond = new Radio();
+
+        cond.currentRadioStation = 9;
+
+        int actual = cond.currentRadioStation;
+        int expected = 9;
 
         assertEquals(expected, actual);
     }
