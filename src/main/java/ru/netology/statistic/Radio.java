@@ -32,7 +32,7 @@ public class Radio {
 
     public void next2RadioStation() {
         if (currentRadioStation <= 9) {
-            currentRadioStation = 0;
+            currentRadioStation = 9;
         }
     }
 
@@ -44,31 +44,7 @@ public class Radio {
 
     public void next4RadioStation() {
         if (currentRadioStation <= 0) {
-            currentRadioStation = 9;
-        }
-    }
-
-    public void next5RadioStation() {
-        if (currentRadioStation <= -1) {
-            currentRadioStation = 0;
-        }
-    }
-
-    public void next6RadioStation() {
-        if (currentRadioStation >= -1) {
-            currentRadioStation = 0;
-        }
-    }
-
-    public void next7RadioStation() {
-        if (currentRadioStation <= 10) {
-            currentRadioStation = 9;
-        }
-    }
-
-    public void next8RadioStation() {
-        if (currentRadioStation >= 10) {
-            currentRadioStation = 0;
+            currentRadioStation = 1;
         }
     }
 
@@ -86,42 +62,18 @@ public class Radio {
 
     public void prev2RadioStation() {
         if (currentRadioStation >= 0) {
-            currentRadioStation = 9;
+            currentRadioStation = 1;
         }
     }
 
     public void prev3RadioStation() {
         if (currentRadioStation <= 9) {
-            currentRadioStation = 0;
+            currentRadioStation = 8;
         }
     }
 
     public void prev4RadioStation() {
         if (currentRadioStation >= 9) {
-            currentRadioStation = 0;
-        }
-    }
-
-    public void prev5RadioStation() {
-        if (currentRadioStation >= 10) {
-            currentRadioStation = 0;
-        }
-    }
-
-    public void prev6RadioStation() {
-        if (currentRadioStation <= 10) {
-            currentRadioStation = 9;
-        }
-    }
-
-    public void prev7RadioStation() {
-        if (currentRadioStation >= -1) {
-            currentRadioStation = 0;
-        }
-    }
-
-    public void prev8RadioStation() {
-        if (currentRadioStation <= -1) {
             currentRadioStation = 0;
         }
     }
@@ -162,25 +114,13 @@ public class Radio {
 
     public void increase3Volume() {
         if (currentVolume >= 0) {
-            currentVolume = 1;
+            currentVolume = 10;
         }
     }
 
     public void increase4Volume() {
         if (currentVolume <= 0) {
             currentVolume = 1;
-        }
-    }
-
-    public void increase5Volume() {
-        if (currentVolume <= -1) {
-            currentVolume = 0;
-        }
-    }
-
-    public void increase6Volume() {
-        if (currentVolume >= -1) {
-            currentVolume = 0;
         }
     }
 
@@ -211,18 +151,6 @@ public class Radio {
     public void decrease4Volume() {
         if (currentVolume >= 10) {
             currentVolume = 9;
-        }
-    }
-
-    public void decrease5Volume() {
-        if (currentVolume <= 11) {
-            currentVolume = 10;
-        }
-    }
-
-    public void decrease6Volume() {
-        if (currentVolume >= 11) {
-            currentVolume = 0;
         }
     }
 }
