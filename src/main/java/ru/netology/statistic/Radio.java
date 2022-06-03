@@ -19,7 +19,9 @@ public class Radio {
     }
 
     public void nextRadioStation() {
-        if (currentRadioStation < 9) {
+        if (currentRadioStation >= 9) {
+            setCurrentRadioStation(0);
+        } else {
             currentRadioStation = currentRadioStation + 1;
         }
     }
@@ -49,7 +51,9 @@ public class Radio {
     }
 
     public void prevRadioStation() {
-        if (currentRadioStation > 0) {
+        if (currentRadioStation <= 0) {
+            setCurrentRadioStation(9);
+        } else {
             currentRadioStation = currentRadioStation - 1;
         }
     }
