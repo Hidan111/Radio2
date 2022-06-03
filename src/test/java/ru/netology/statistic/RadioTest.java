@@ -924,9 +924,9 @@ public class RadioTest {
     void getCurrentVolume() {
         Radio cond = new Radio();
 
-        cond.currentRadioStation = -1;
+        cond.currentVolume = -1;
 
-        int actual = cond.currentRadioStation;
+        int actual = cond.currentVolume;
         int expected = -1;
 
         assertEquals(expected, actual);
@@ -936,9 +936,9 @@ public class RadioTest {
     void getCurrentVolume1() {
         Radio cond = new Radio();
 
-        cond.currentRadioStation = 11;
+        cond.currentVolume = 11;
 
-        int actual = cond.currentRadioStation;
+        int actual = cond.currentVolume;
         int expected = 11;
 
         assertEquals(expected, actual);
