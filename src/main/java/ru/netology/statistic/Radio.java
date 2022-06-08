@@ -19,62 +19,26 @@ public class Radio {
     }
 
     public void nextRadioStation() {
-        if (currentRadioStation < 9) {
-            currentRadioStation = currentRadioStation + 1;
-        }
-    }
-
-    public void next1RadioStation() {
         if (currentRadioStation >= 9) {
-            currentRadioStation = 0;
-        }
-    }
+            setCurrentRadioStation(0);
 
-    public void next2RadioStation() {
-        if (currentRadioStation <= 9) {
-            currentRadioStation = 9;
-        }
-    }
-
-    public void next3RadioStation() {
-        if (currentRadioStation >= 0) {
-            currentRadioStation = 9;
-        }
-    }
-
-    public void next4RadioStation() {
-        if (currentRadioStation <= 0) {
-            currentRadioStation = 1;
+            if (currentRadioStation >= 0) {
+                setCurrentRadioStation(9);
+            }
+        } else {
+            setCurrentRadioStation(currentRadioStation + 1);
         }
     }
 
     public void prevRadioStation() {
-        if (currentRadioStation > 0) {
-            currentRadioStation = currentRadioStation - 1;
-        }
-    }
-
-    public void prev1RadioStation() {
         if (currentRadioStation <= 0) {
-            currentRadioStation = 9;
-        }
-    }
+            setCurrentRadioStation(9);
 
-    public void prev2RadioStation() {
-        if (currentRadioStation >= 0) {
-            currentRadioStation = 1;
-        }
-    }
-
-    public void prev3RadioStation() {
-        if (currentRadioStation <= 9) {
-            currentRadioStation = 8;
-        }
-    }
-
-    public void prev4RadioStation() {
-        if (currentRadioStation >= 9) {
-            currentRadioStation = 0;
+            if (currentRadioStation <= 9) {
+                setCurrentRadioStation(0);
+            }
+        } else {
+            setCurrentRadioStation(currentRadioStation - 1);
         }
     }
 
@@ -95,62 +59,26 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if (currentVolume < 10) {
-            currentVolume = currentVolume + 1;
-        }
-    }
-
-    public void increase1Volume() {
         if (currentVolume >= 10) {
-            currentVolume = 10;
-        }
-    }
+            setCurrentVolume(0);
 
-    public void increase2Volume() {
-        if (currentVolume <= 10) {
-            currentVolume = 10;
-        }
-    }
-
-    public void increase3Volume() {
-        if (currentVolume >= 0) {
-            currentVolume = 10;
-        }
-    }
-
-    public void increase4Volume() {
-        if (currentVolume <= 0) {
-            currentVolume = 1;
+            if (currentVolume >= 0) {
+                setCurrentVolume(10);
+            }
+        } else {
+            setCurrentVolume(currentVolume + 1);
         }
     }
 
     public void decreaseVolume() {
-        if (currentVolume > 0) {
-            currentVolume = currentVolume - 1;
-        }
-    }
-
-    public void decrease1Volume() {
         if (currentVolume <= 0) {
-            currentVolume = 0;
-        }
-    }
+            setCurrentVolume(10);
 
-    public void decrease2Volume() {
-        if (currentVolume >= 0) {
-            currentVolume = 0;
-        }
-    }
-
-    public void decrease3Volume() {
-        if (currentVolume <= 10) {
-            currentVolume = 9;
-        }
-    }
-
-    public void decrease4Volume() {
-        if (currentVolume >= 10) {
-            currentVolume = 9;
+            if (currentVolume <= 10) {
+                setCurrentVolume(0);
+            }
+        } else {
+            setCurrentVolume(currentVolume - 1);
         }
     }
 }
