@@ -7,6 +7,46 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RadioTest {
 
     @Test
+    public void test() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(5);
+
+        assertEquals(radio.getCurrentRadioStation(), radio.getCurrentRadioStation());
+    }
+
+    @Test
+    public void test1() {
+        Radio radio = new Radio();
+        radio.setMaxRadioStation(9);
+
+        assertEquals(9, radio.getMaxRadioStation());
+    }
+
+    @Test
+    public void test3() {
+        Radio radio = new Radio();
+        radio.setMaxVolume(10);
+
+        assertEquals(10, radio.getMaxVolume());
+    }
+
+    @Test
+    public void test2() {
+        Radio radio = new Radio();
+        radio.setMinRadioStation(0);
+
+        assertEquals(0, radio.getMinRadioStation());
+    }
+
+    @Test
+    public void test4() {
+        Radio radio = new Radio();
+        radio.setMinVolume(0);
+
+        assertEquals(0, radio.getMinVolume());
+    }
+
+    @Test
     void findNext1() {
         Radio cond = new Radio();
 
@@ -394,150 +434,6 @@ public class RadioTest {
 
         int actual = cond.getCurrentRadioStation();
         int expected = 0;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 0;
-
-        int actual = cond.currentRadioStation;
-        int expected = 0;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication1() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 1;
-
-        int actual = cond.currentRadioStation;
-        int expected = 1;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication2() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 2;
-
-        int actual = cond.currentRadioStation;
-        int expected = 2;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication3() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 3;
-
-        int actual = cond.currentRadioStation;
-        int expected = 3;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication4() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 4;
-
-        int actual = cond.currentRadioStation;
-        int expected = 4;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication5() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 5;
-
-        int actual = cond.currentRadioStation;
-        int expected = 5;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication6() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 6;
-
-        int actual = cond.currentRadioStation;
-        int expected = 6;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication7() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 7;
-
-        int actual = cond.currentRadioStation;
-        int expected = 7;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication8() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 8;
-
-        int actual = cond.currentRadioStation;
-        int expected = 8;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication9() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 9;
-
-        int actual = cond.currentRadioStation;
-        int expected = 9;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication10() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = -1;
-
-        int actual = cond.currentRadioStation;
-        int expected = -1;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findIndication11() {
-        Radio cond = new Radio();
-
-        cond.currentRadioStation = 10;
-
-        int actual = cond.currentRadioStation;
-        int expected = 10;
 
         assertEquals(expected, actual);
     }
